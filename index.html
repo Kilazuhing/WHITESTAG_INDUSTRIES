@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiteStag | Digital Acceleration for High-Growth Startups</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="WhiteStag provides premium Web Development, App Development, and High-ROI Advertisement services tailored for ambitious startups. Scale your digital presence today.">
+    <meta name="keywords" content="startup accelerator, web development, app development, startup ads, growth marketing, digital agency, premium web design">
+    <meta name="author" content="WhiteStag">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="WhiteStag | Digital Acceleration for High-Growth Startups">
+    <meta property="og:description" content="Premium Web Development, App Development, and High-ROI Advertisement services. We design, craft, and scale products for ambitious startups.">
+    <meta property="og:url" content="https://whitestag.agency">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    
+    <!-- Ambient Canvas Particles -->
+    <canvas id="ambient-canvas"></canvas>
+    <!-- Background Gradients -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="main-nav">
+        <div class="container nav-container">
+            <a href="#hero" class="logo" id="nav-logo" aria-label="WhiteStag Home">
+                <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Stylized geometric Stag head / antlers -->
+                    <path d="M50 85L32 60H68L50 85Z" fill="url(#logo-grad-accent)" />
+                    <path d="M32 60L20 40H30L36 50H64L70 40H80L68 60H32Z" fill="url(#logo-grad-primary)" />
+                    <path d="M30 40L15 20H22L34 35" stroke="var(--color-primary)" stroke-width="3" stroke-linecap="round" />
+                    <path d="M70 40L85 20H78L66 35" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" />
+                    <path d="M50 45V15" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 4" />
+                    <defs>
+                        <linearGradient id="logo-grad-primary" x1="20" y1="40" x2="80" y2="60" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="var(--color-primary)" />
+                            <stop offset="1" stop-color="var(--color-primary-glow)" />
+                        </linearGradient>
+                        <linearGradient id="logo-grad-accent" x1="32" y1="60" x2="68" y2="85" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="var(--color-accent)" />
+                            <stop offset="1" stop-color="var(--color-accent-glow)" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo-text">WHITE<span class="highlight">STAG</span></span>
+            </a>
+            
+            <nav class="nav-links" id="menu-links">
+                <a href="#services" class="nav-link" id="link-services">Services</a>
+                <a href="#showcase" class="nav-link" id="link-showcase">Showcase</a>
+                <a href="#process" class="nav-link" id="link-process">Our Process</a>
+                <a href="#contact" class="nav-link" id="link-contact">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-nav" id="btn-nav-cta">Let's Talk</a>
+                <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+        <!-- Scroll progress bar -->
+        <div class="scroll-progress" id="scroll-bar"></div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="section hero-sec" id="hero">
+            <div class="container grid hero-grid">
+                <div class="hero-content">
+                    <div class="badge fade-in-element">
+                        <span class="badge-dot"></span> Accelerating Startup Growth
+                    </div>
+                    <h1 class="hero-title fade-in-element">
+                        We Architect the <br>
+                        <span class="text-gradient">Digital Presence</span> <br>
+                        of Future Unicorns
+                    </h1>
+                    <p class="hero-desc fade-in-element">
+                        WhiteStag delivers high-velocity Web Development, custom App Development, and hyper-targeted Advertisement campaigns. Engineered for scalability, optimized for conversion, crafted for impact.
+                    </p>
+                    <div class="hero-ctas fade-in-element">
+                        <a href="#contact" class="btn btn-primary" id="hero-cta-primary">Launch Your Project</a>
+                        <a href="#services" class="btn btn-secondary" id="hero-cta-secondary">Explore Capabilities</a>
+                    </div>
+                    <div class="hero-trust fade-in-element">
+                        <span class="trust-title">TRUSTED BY INNOVATORS AT</span>
+                        <div class="trust-logos">
+                            <span class="trust-logo">ApexOS</span>
+                            <span class="trust-logo">VortexAI</span>
+                            <span class="trust-logo">FinFlow</span>
+                            <span class="trust-logo">NovaBio</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual fade-in-element">
+                    <div class="interactive-stage">
+                        <div class="stage-glow"></div>
+                        <!-- Geometric premium visual of a stag silhouette/antler mesh inside a glass capsule -->
+                        <div class="glass-orb">
+                            <div class="orb-inner">
+                                <svg class="orb-stag-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M50 90 L10 40 L35 38 L50 25 L65 38 L90 40 Z" stroke="url(#orb-stag-grad)" stroke-width="1.5" stroke-linejoin="round" />
+                                    <!-- Antler network -->
+                                    <path d="M35 38 L25 15 L32 20 M25 15 L18 10 M32 20 L27 5" stroke="var(--color-primary)" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M65 38 L75 15 L68 20 M75 15 L82 10 M68 20 L73 5" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" />
+                                    <circle cx="50" cy="25" r="3" fill="var(--color-white)" />
+                                    <defs>
+                                        <linearGradient id="orb-stag-grad" x1="10" y1="40" x2="90" y2="40" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="var(--color-primary)" />
+                                            <stop offset="0.5" stop-color="var(--color-white)" />
+                                            <stop offset="1" stop-color="var(--color-accent)" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="orb-ring ring-1"></div>
+                            <div class="orb-ring ring-2"></div>
+                            <div class="orb-floating-card card-dev">
+                                <div class="card-icon">⚡</div>
+                                <div class="card-details">
+                                    <span class="card-title">Production Build</span>
+                                    <span class="card-value">Performance 100%</span>
+                                </div>
+                            </div>
+                            <div class="orb-floating-card card-ads">
+                                <div class="card-icon">📈</div>
+                                <div class="card-details">
+                                    <span class="card-title">Conversion Rate</span>
+                                    <span class="card-value">+342% Growth</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section services-sec" id="services">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tagline">Elite Ecosystem</span>
+                    <h2 class="section-title">Engineered to Accelerate</h2>
+                    <p class="section-desc">We combine engineering mastery, custom UX designs, and scientific ad campaigns to cover all critical growth channels for your startup.</p>
+                </div>
+                
+                <div class="grid services-grid">
+                    <!-- Web Development Card -->
+                    <div class="service-card" id="card-web-dev">
+                        <div class="card-glow-tracker"></div>
+                        <div class="card-header-icon color-web">
+                            <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                                <path d="M6 8l-2 2 2 2M18 8l2 2-2 2M14 7l-4 10"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Web Development</h3>
+                        <p class="card-text">High-performance showcase sites, full-featured web applications, and marketing engines built using modern stack choices. Structured for instantaneous loads and world-class search visibility.</p>
+                        <ul class="card-features">
+                            <li><span class="feat-bullet"></span> React, Vue & Jamstack Architectures</li>
+                            <li><span class="feat-bullet"></span> Extreme Web Core Vitals Optimization</li>
+                            <li><span class="feat-bullet"></span> Pixel-Perfect Responsive UX Design</li>
+                        </ul>
+                        <div class="card-footer-metric">
+                            <span class="metric-label">Target PageSpeed score</span>
+                            <span class="metric-value">99+</span>
+                        </div>
+                    </div>
+
+                    <!-- App Development Card -->
+                    <div class="service-card" id="card-app-dev">
+                        <div class="card-glow-tracker"></div>
+                        <div class="card-header-icon color-app">
+                            <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">App Development</h3>
+                        <p class="card-text">Immersive iOS and Android applications engineered for fluid interactivity. From real-time messaging and wallet integrations to smooth native animations and seamless offline storage.</p>
+                        <ul class="card-features">
+                            <li><span class="feat-bullet"></span> Cross-Platform & Native Architectures</li>
+                            <li><span class="feat-bullet"></span> Fluid UI Micro-interactions</li>
+                            <li><span class="feat-bullet"></span> Store Deployment & Compliance Handling</li>
+                        </ul>
+                        <div class="card-footer-metric">
+                            <span class="metric-label">Client Retention Boost</span>
+                            <span class="metric-value">+48%</span>
+                        </div>
+                    </div>
+
+                    <!-- Ads & Marketing Card -->
+                    <div class="service-card" id="card-ads">
+                        <div class="card-glow-tracker"></div>
+                        <div class="card-header-icon color-ads">
+                            <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="6"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Growth & Ads</h3>
+                        <p class="card-text">Hyper-focused customer acquisition models across Meta, Google, and niche networks. Fully integrated conversion tracking combined with data-driven creative direction to maximize ROAS.</p>
+                        <ul class="card-features">
+                            <li><span class="feat-bullet"></span> High-ROI Media Buying & Copywriting</li>
+                            <li><span class="feat-bullet"></span> Multi-Channel Funnel Architecture</li>
+                            <li><span class="feat-bullet"></span> Real-time Analytics & Attribution Auditing</li>
+                        </ul>
+                        <div class="card-footer-metric">
+                            <span class="metric-label">Average Campaign ROAS</span>
+                            <span class="metric-value">4.5x</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Showcase Section -->
+        <section class="section showcase-sec" id="showcase">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tagline">Our Work</span>
+                    <h2 class="section-title">Crafted to Perfection</h2>
+                    <p class="section-desc">A deep dive into the systems, interfaces, and campaigns we build for our clients.</p>
+                </div>
+                
+                <!-- Showcase Tabs -->
+                <div class="showcase-tabs" role="tablist">
+                    <button class="tab-btn active" id="tab-web" role="tab" aria-selected="true" aria-controls="panel-web" data-tab="web">Web Architectures</button>
+                    <button class="tab-btn" id="tab-app" role="tab" aria-selected="false" aria-controls="panel-app" data-tab="app">Mobile Engineering</button>
+                    <button class="tab-btn" id="tab-ads" role="tab" aria-selected="false" aria-controls="panel-ads" data-tab="ads">Growth Advertising</button>
+                </div>
+
+                <!-- Showcase Showcase Panel -->
+                <div class="showcase-display">
+                    <!-- Web Development Showcase -->
+                    <div class="showcase-panel active" id="panel-web" role="tabpanel" aria-labelledby="tab-web">
+                        <div class="grid panel-grid">
+                            <div class="panel-info">
+                                <span class="client-name">VORTEX ANALYTICS</span>
+                                <h4 class="showcase-project-title">Next-Gen SaaS Analytics Dashboard</h4>
+                                <p class="showcase-project-desc">A highly scalable web dashboard loaded with real-time charting, micro-frontend modules, and fluid drag-drop interfaces. Built to process millions of event logs per second with sub-100ms render speeds.</p>
+                                <div class="showcase-tags">
+                                    <span class="tag">Next.js</span>
+                                    <span class="tag">TypeScript</span>
+                                    <span class="tag">WebSockets</span>
+                                    <span class="tag">Canvas API</span>
+                                </div>
+                                <div class="showcase-stat-grid">
+                                    <div class="showcase-stat">
+                                        <span class="stat-number">99.9%</span>
+                                        <span class="stat-lbl">Uptime SLA</span>
+                                    </div>
+                                    <div class="showcase-stat">
+                                        <span class="stat-number">&lt; 0.8s</span>
+                                        <span class="stat-lbl">First Contentful Paint</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel-visual">
+                                <!-- Beautiful interactive Web Mockup -->
+                                <div class="browser-mockup">
+                                    <div class="browser-header">
+                                        <div class="browser-dots">
+                                            <span class="dot"></span>
+                                            <span class="dot"></span>
+                                            <span class="dot"></span>
+                                        </div>
+                                        <div class="browser-search">vortex-app.io/dashboard</div>
+                                    </div>
+                                    <div class="browser-body">
+                                        <div class="mock-sidebar">
+                                            <div class="mock-side-logo"></div>
+                                            <div class="mock-side-item active"></div>
+                                            <div class="mock-side-item"></div>
+                                            <div class="mock-side-item"></div>
+                                        </div>
+                                        <div class="mock-content">
+                                            <div class="mock-header-row">
+                                                <div class="mock-title-skeleton"></div>
+                                                <div class="mock-avatar-skeleton"></div>
+                                            </div>
+                                            <div class="mock-grid">
+                                                <div class="mock-stat-card glow-blue">
+                                                    <span class="mock-card-label">Active Users</span>
+                                                    <span class="mock-card-val">124,582</span>
+                                                    <div class="mock-trend green">+12.4%</div>
+                                                </div>
+                                                <div class="mock-stat-card">
+                                                    <span class="mock-card-label">Conversion Rate</span>
+                                                    <span class="mock-card-val">4.82%</span>
+                                                    <div class="mock-trend green">+1.1%</div>
+                                                </div>
+                                            </div>
+                                            <div class="mock-chart-container">
+                                                <div class="mock-chart-header">
+                                                    <div class="mock-chart-title">Growth Curve</div>
+                                                </div>
+                                                <div class="mock-chart">
+                                                    <svg class="mock-chart-svg" viewBox="0 0 300 100">
+                                                        <defs>
+                                                            <linearGradient id="chart-grad" x1="0" y1="0" x2="0" y2="1">
+                                                                <stop offset="0%" stop-color="var(--color-primary)" stop-opacity="0.3"/>
+                                                                <stop offset="100%" stop-color="var(--color-primary)" stop-opacity="0.0"/>
+                                                            </linearGradient>
+                                                        </defs>
+                                                        <path d="M 0 90 Q 50 60, 100 75 T 200 30 T 300 10 L 300 100 L 0 100 Z" fill="url(#chart-grad)" />
+                                                        <path d="M 0 90 Q 50 60, 100 75 T 200 30 T 300 10" fill="none" stroke="var(--color-primary)" stroke-width="3" />
+                                                        <circle cx="200" cy="30" r="4" fill="var(--color-white)" stroke="var(--color-primary)" stroke-width="2" />
+                                                        <circle cx="300" cy="10" r="4" fill="var(--color-white)" stroke="var(--color-primary)" stroke-width="2" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- App Development Showcase -->
+                    <div class="showcase-panel" id="panel-app" role="tabpanel" aria-labelledby="tab-app">
+                        <div class="grid panel-grid">
+                            <div class="panel-info">
+                                <span class="client-name">FINFLOW LTD.</span>
+                                <h4 class="showcase-project-title">Secure Decentralized Mobile Wallet</h4>
+                                <p class="showcase-project-desc">A cross-platform React Native app engineered with biometrics, instant ledger synchronizations, and an incredibly intuitive asset transfer workflow. Smooth 120 FPS transitions and highly responsive interaction gestures.</p>
+                                <div class="showcase-tags">
+                                    <span class="tag">React Native</span>
+                                    <span class="tag">Web3 Engine</span>
+                                    <span class="tag">Biometrics API</span>
+                                    <span class="tag">Expo</span>
+                                </div>
+                                <div class="showcase-stat-grid">
+                                    <div class="showcase-stat">
+                                        <span class="stat-number">4.9/5</span>
+                                        <span class="stat-lbl">App Store Rating</span>
+                                    </div>
+                                    <div class="showcase-stat">
+                                        <span class="stat-number">&lt; 15ms</span>
+                                        <span class="stat-lbl">Gesture Latency</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel-visual flex-center">
+                                <!-- Mobile Phone Frame Mockup -->
+                                <div class="phone-mockup">
+                                    <div class="phone-speaker"></div>
+                                    <div class="phone-screen">
+                                        <div class="phone-header">
+                                            <span class="phone-time">09:41</span>
+                                            <div class="phone-status">
+                                                <span class="signal">📶</span>
+                                                <span class="battery">🔋</span>
+                                            </div>
+                                        </div>
+                                        <div class="phone-body">
+                                            <div class="phone-wallet-card">
+                                                <span class="wallet-lbl">FinFlow Wallet</span>
+                                                <span class="wallet-bal">$12,490.85</span>
+                                                <span class="wallet-increase">+24.8% this month</span>
+                                            </div>
+                                            <div class="phone-quick-actions">
+                                                <div class="action-btn-circle"><span>📥</span><small>Receive</small></div>
+                                                <div class="action-btn-circle"><span>📤</span><small>Send</small></div>
+                                                <div class="action-btn-circle"><span>🔁</span><small>Swap</small></div>
+                                            </div>
+                                            <div class="phone-assets-list">
+                                                <div class="asset-title-row">
+                                                    <span>Assets</span>
+                                                    <small>See all</small>
+                                                </div>
+                                                <div class="asset-item">
+                                                    <div class="asset-avatar">🪙</div>
+                                                    <div class="asset-meta">
+                                                        <span>Ethereum</span>
+                                                        <small>3.42 ETH</small>
+                                                    </div>
+                                                    <span class="asset-val">$9,165.20</span>
+                                                </div>
+                                                <div class="asset-item">
+                                                    <div class="asset-avatar">💵</div>
+                                                    <div class="asset-meta">
+                                                        <span>USDC Stablecoin</span>
+                                                        <small>3,325.65 USDC</small>
+                                                    </div>
+                                                    <span class="asset-val">$3,325.65</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="phone-home-indicator"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ads & Marketing Showcase -->
+                    <div class="showcase-panel" id="panel-ads" role="tabpanel" aria-labelledby="tab-ads">
+                        <div class="grid panel-grid">
+                            <div class="panel-info">
+                                <span class="client-name">NOVABIO LABS</span>
+                                <h4 class="showcase-project-title">Scale-up Campaign & Funnel Design</h4>
+                                <p class="showcase-project-desc">A comprehensive growth advertising model mapping custom landing page designs to surgical Facebook and Google Ads campaigns. Optimized dynamically using advanced attribution tooling to capture pre-launch demand.</p>
+                                <div class="showcase-tags">
+                                    <span class="tag">Meta Ads</span>
+                                    <span class="tag">Google Performance Max</span>
+                                    <span class="tag">Retargeting funnels</span>
+                                    <span class="tag">Analytics Auditing</span>
+                                </div>
+                                <div class="showcase-stat-grid">
+                                    <div class="showcase-stat">
+                                        <span class="stat-number">5.6x</span>
+                                        <span class="stat-lbl">Ad Spend Return (ROAS)</span>
+                                    </div>
+                                    <div class="showcase-stat">
+                                        <span class="stat-number">28,000+</span>
+                                        <span class="stat-lbl">Verified Leads Captured</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel-visual">
+                                <!-- Ad Campaign Mockup Dashboard -->
+                                <div class="campaign-mockup">
+                                    <div class="campaign-header">
+                                        <span>Campaign Dashboard</span>
+                                        <span class="camp-status active-dot">Active Run</span>
+                                    </div>
+                                    <div class="campaign-body">
+                                        <div class="campaign-grid">
+                                            <div class="camp-stat">
+                                                <span class="camp-lbl">Ad Spend</span>
+                                                <span class="camp-val">$14.2K</span>
+                                            </div>
+                                            <div class="camp-stat">
+                                                <span class="camp-lbl">Conversions</span>
+                                                <span class="camp-val">3,892</span>
+                                            </div>
+                                            <div class="camp-stat accent-glow">
+                                                <span class="camp-lbl">ROAS Target</span>
+                                                <span class="camp-val">5.6x</span>
+                                            </div>
+                                        </div>
+                                        <div class="funnel-viz">
+                                            <div class="funnel-stage stage-1">
+                                                <span class="stage-name">Impressions</span>
+                                                <span class="stage-count">580k</span>
+                                            </div>
+                                            <div class="funnel-stage stage-2">
+                                                <span class="stage-name">Clicks</span>
+                                                <span class="stage-count">48k (8.2% CTR)</span>
+                                            </div>
+                                            <div class="funnel-stage stage-3">
+                                                <span class="stage-name">Leads Captured</span>
+                                                <span class="stage-count">8.2k (17% CVR)</span>
+                                            </div>
+                                            <div class="funnel-stage stage-4">
+                                                <span class="stage-name">Customers</span>
+                                                <span class="stage-count">3.8k</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Timeline Section -->
+        <section class="section process-sec" id="process">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tagline">How We Work</span>
+                    <h2 class="section-title">The Velocity Engine</h2>
+                    <p class="section-desc">Our workflow is designed for speed, communication, and flawless execution. We move your startup forward at warp speed.</p>
+                </div>
+                
+                <div class="process-timeline">
+                    <!-- Step 1 -->
+                    <div class="timeline-step">
+                        <div class="step-marker">
+                            <span class="step-num">01</span>
+                        </div>
+                        <div class="step-content">
+                            <h4 class="step-title">Blueprint & Architecture</h4>
+                            <p class="step-desc">We align on specifications, map user flows, design Figma mockups, and layout the engineering architecture before writing a line of code.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="timeline-step">
+                        <div class="step-marker">
+                            <span class="step-num">02</span>
+                        </div>
+                        <div class="step-content">
+                            <h4 class="step-title">Sprint & Craft</h4>
+                            <p class="step-desc">Our developers and designers build your product in transparent, high-velocity sprints. You see daily updates on our staging servers.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="timeline-step">
+                        <div class="step-marker">
+                            <span class="step-num">03</span>
+                        </div>
+                        <div class="step-content">
+                            <h4 class="step-title">Performance Optimization</h4>
+                            <p class="step-desc">We run audits for Core Web Vitals, native application performance testing, accessibility conformance, and tracking event setup.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="timeline-step">
+                        <div class="step-marker">
+                            <span class="step-num">04</span>
+                        </div>
+                        <div class="step-content">
+                            <h4 class="step-title">Deploy & Scale Campaign</h4>
+                            <p class="step-desc">We push to production (using CDN delivery) and launch hyper-targeted acquisition campaigns to fill your sales pipeline from day one.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-sec" id="contact">
+            <div class="container grid contact-grid">
+                <div class="contact-info">
+                    <span class="section-tagline">Start a Project</span>
+                    <h2 class="section-title">Let's build something <span class="text-gradient">legendary</span>.</h2>
+                    <p class="contact-desc">Ready to accelerate your startup? Fill out the brief query template or copy our mail directly to begin your onboarding. We respond in under 12 hours.</p>
+                    
+                    <div class="direct-mail-box">
+                        <span class="mail-title">Direct Connection</span>
+                        <div class="mail-row">
+                            <a href="mailto:kilazuhing@gmail.com" class="mail-address" id="mail-link">kilazuhing@gmail.com</a>
+                            <button class="copy-btn" id="copy-mail-btn" aria-label="Copy email address to clipboard">
+                                <span class="copy-text" id="copy-btn-text">Copy</span>
+                                <svg class="copy-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form generator -->
+                <div class="contact-form-container">
+                    <form class="interactive-form" id="contact-mailto-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-name">Name</label>
+                                <input type="text" id="form-name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-company">Startup Name</label>
+                                <input type="text" id="form-company" placeholder="Acme Inc.">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Services Needed</label>
+                            <div class="form-checkboxes">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="services" value="Web Development">
+                                    <span class="checkbox-custom"></span>
+                                    Web Dev
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="services" value="App Development">
+                                    <span class="checkbox-custom"></span>
+                                    App Dev
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="services" value="Growth & Ads">
+                                    <span class="checkbox-custom"></span>
+                                    Ads & Marketing
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-message">Tell us about your project</label>
+                            <textarea id="form-message" rows="4" placeholder="Briefly describe what you're building..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit" id="submit-form-btn">
+                            Prepare Email Inquiry 
+                            <svg class="submit-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="logo-text">WHITE<span class="highlight">STAG</span></span>
+                </div>
+                <p class="brand-tagline">Crafting digital engines for tomorrow's leaders.</p>
+            </div>
+            
+            <div class="footer-links-grid">
+                <div class="footer-col">
+                    <span class="col-title">Capabilities</span>
+                    <a href="#services">Web Dev</a>
+                    <a href="#services">App Dev</a>
+                    <a href="#services">Growth Ads</a>
+                </div>
+                <div class="footer-col">
+                    <span class="col-title">Company</span>
+                    <a href="#hero">About Showcase</a>
+                    <a href="#process">Process Engine</a>
+                    <a href="#contact">Contact Hub</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <span class="copyright">&copy; 2026 WhiteStag Group. All rights reserved.</span>
+            <div class="legal-links">
+                <span class="legal-link">Privacy Policy</span>
+                <span class="legal-link">Terms of Service</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script file -->
+    <script src="app.js"></script>
+</body>
+</html>
